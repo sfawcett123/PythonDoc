@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+   <div class="container">
+    <div class="row">
+        <div class="col-12 h-100 text-center">
+            <img class="caplogo"  src="https://www.capgemini.com/gb-en/wp-content/themes/capgemini-komposite/assets/images/logo.svg" alt="CapGemini logo">
+        </div>
+    </div>
+    {% if not indexer %}
+        <div class="row">
+            <div class="col-12 h-100 text-center">
+                <span>Indexer is empty</span>
+                <a class="btn btn-outline-secondary" href="{{url_for('search.index') }}">Index</a>
+            </div>
+        </div>
+    {% else %}
+    <div class="row">
+        <div class="col-12 h-100 text-center">
+            <span>Indexer is populated</span>
+            <a class="btn btn-outline-secondary" href="{{url_for('search.show') }}">Show</a>
+        </div>
+    </div>
+    {% endif %}
+    <div class="search top-buffer">
+      <div class="form-group has-search">
+          <form action="{{ url_for('search.query') }}"  method='POST'>
+              <span class="fa fa-search form-control-feedback"></span>
+              <input  class="form-control" type="search" name="query" aria-label="Search" placeholder='Search' value=""  >
+          </form>
+      </div>
+  </div>
+
+
+  {% if matches %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 h-100 text-center">
+                <table class="styled-table">
+                {% for match in matches %}
+                <tr>
+                    <td><a href="{{match.url}}">{{match.url}}</a></td>
+                    <td>{{match.summary}}</td>
+                    <td>100</td>
+                </tr>
+                {% endfor %}
+                </table>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+   <div class="container">
+    <div class="row">
+        <div class="col-12 h-100 text-center">
+            <img class="caplogo"  src="https://www.capgemini.com/gb-en/wp-content/themes/capgemini-komposite/assets/images/logo.svg" alt="CapGemini logo">
+        </div>
+    </div>
+    {% if not indexer %}
+        <div class="row">
+            <div class="col-12 h-100 text-center">
+                <a class="btn btn-outline-secondary" href="{{url_for('search.search') }}">Search</a>
+                <a class="btn btn-outline-secondary" href="{{url_for('search.index') }}">Re-index</a>
+            </div>
+        </div>
+    {% else %}
+    <div class="row">
+        <div class="col-12 h-100 text-center">
+            <a class="btn btn-outline-secondary" href="{{url_for('search.search') }}">Search</a>
+        </div>
+    </div>
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 h-100 text-center">
+                <table class="styled-table">
+                {% for document in documents %}
+                <tr>
+                    <td><a href="{{document.url}}">{{document.url}}</a></td>
+                    <td>{{document.summary}}</td>
+                    <td>{{document.keywords}}</td>
+                </tr>
+                {% endfor %}
+                </table>
+            </div>
+        </div>
+{% endblock %}

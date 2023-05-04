@@ -1,0 +1,146 @@
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.table-condensed{
+    font-size: 10px;
+  }
+  
+  .top-buffer {
+  margin-top:20px;
+  }
+  
+  .search {
+      width: 50%;
+      margin: 50px auto;
+  }
+  
+  .caplogo {
+    margin-top:20px;
+    height: 100px;
+    width: 300px;
+  }
+  
+  .small-caplogo {
+    margin-top:20px;
+    height: 50px;
+    width: 160px;
+  }
+  
+  .document {
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: normal;
+      margin: 0;
+      padding: 0;
+      color: #609;
+      font-family: arial,sans-serif;
+  }
+  
+  .found {
+      color: #70757a;
+      font-size: 14px;
+      line-height: 1.58;
+      word-wrap: break-word;
+      font-family: arial,sans-serif;
+      font-weight: normal;
+  }
+  
+  .btn_bar {
+      margin: 0;
+      padding: 0;
+      color: #70757a;
+      font-size: .75em;
+  }
+  
+  .summary {
+      color: #4d5156;
+      font-size: 14px;
+      line-height: 1.58;
+      word-wrap: break-word;
+      font-family: arial,sans-serif;
+      font-weight: normal;
+  }
+  
+  .score {
+      color: #4d5156;
+      font-size: 14px;
+      line-height: 1.58;
+      word-wrap: break-word;
+      font-family: arial,sans-serif;
+      font-weight: bold;
+  }
+  
+  .footer-text{
+    font-family: arial,sans-serif;
+    color: #609;
+    font-size: small;
+  }
+  
+  .has-search .form-control {
+      padding-left: 2.375rem;
+  }
+  
+  .has-search .form-control-feedback {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      height: 2.375rem;
+      width: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: #aaa;
+  }
+  
+  .black-background {background-color:#000000;}
+  .white {color:#ffffff;}
+  
+  .jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+      background: #0070ad; /* Old browsers */
+      background: -moz-linear-gradient(top,    #0070ad 0%,#0070ad 14%,#12acdb 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #0070ad 0%,#0070ad 14%,#12acdb 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,   #0070ad 0%,#0070ad 14%,#12acdb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0070ad', endColorstr='#12acdb',GradientType=0 ); /* IE6-9 */
+  }
+  .hd1{
+      color:#fff;
+  }
+  
+  .space { margin:0; padding:10px; height:50px; }
