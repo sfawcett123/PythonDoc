@@ -5,6 +5,7 @@
 ```
 # Set up environment
 python -m venv .
+source bin/activate
 ```
 
 ## Running the Application
